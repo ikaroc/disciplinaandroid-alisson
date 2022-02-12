@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/round_button.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_hotspot_list.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/activity_hotspot_list2.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_landing.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_location_list.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_new_hotspot.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_new_location.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/activity_new_location2.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_new_position.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/fragment_listview.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/fragment_recycler_position.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_fragment.xml" value="0.19010416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

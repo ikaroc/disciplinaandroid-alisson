@@ -8,7 +8,7 @@
         android:id="@+id/hotspot_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hotspots"
+        android:text=""
         android:textSize="12pt"
         android:textStyle="bold"
     />
@@ -27,14 +27,16 @@
 
     <Button
         android:id="@+id/hotspot_new_hotspot_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:textSize="11pt"
+        android:gravity="center|center"
+        android:text="+"
+        android:textStyle="bold"
+        android:background="@drawable/round_button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:background="@drawable/round_button"
-        android:text="+"
-        android:textSize="11pt"
-        android:padding="10dp"
+        android:layout_margin="5dp"
         />
 
 </RelativeLayout>

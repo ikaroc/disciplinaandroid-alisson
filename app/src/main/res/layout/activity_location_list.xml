@@ -22,14 +22,16 @@
         />
     <Button
         android:id="@+id/location_new_location_button"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:textSize="11pt"
-        android:gravity="center"
-        android:background="@drawable/outline_add_white_24dp"
+        android:gravity="center|center"
+        android:text="+"
+        android:textStyle="bold"
+        android:background="@drawable/round_button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:padding="10dp"
+        android:layout_margin="5dp"
         />
 
 </RelativeLayout>

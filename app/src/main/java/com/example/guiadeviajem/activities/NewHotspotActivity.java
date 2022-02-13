@@ -22,9 +22,10 @@ import com.example.guiadeviajem.databinding.ActivityNewHotspotBinding;
 public class NewHotspotActivity extends FragmentActivity implements OnMapReadyCallback {
     private ActivityNewHotspotBinding binding;
     private Button button;
-    private EditText nameInput, weekendInput;
+    private EditText nameInput, weekdayInput;
     private HotspotDatabase database;
     private Double latitude, longitude;
+    private String pLatitude, pLongitude;
     private String positionId;
 
     @Override
@@ -40,18 +41,21 @@ public class NewHotspotActivity extends FragmentActivity implements OnMapReadyCa
 
         button = findViewById(R.id.new_hotspot_button);
         nameInput = findViewById(R.id.new_hotspot_input_name);
-        weekendInput = findViewById(R.id.new_hotspot_input_date);
+        weekdayInput = findViewById(R.id.new_hotspot_input_date);
 
         database = HotspotDatabase.getDbInstance(NewHotspotActivity.this);
 
         Intent getData = getIntent();
         positionId = getData.getStringExtra("id");
+        String pName = getData.getStringExtra("pName");
+        pLatitude = getData.getStringExtra("pLatitude");
+        pLongitude = getData.getStringExtra("pLongitude");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String name = nameInput.getText().toString();
-                String weekend = weekendInput.getText().toString();
+                String weekend = weekdayInput.getText().toString();
 
                 database.positionDAO().insertAll(new HotspotEntity(
                         name,
@@ -61,6 +65,10 @@ public class NewHotspotActivity extends FragmentActivity implements OnMapReadyCa
                         Integer.parseInt(positionId)
                 ));
                 Intent navigation = new Intent(NewHotspotActivity.this, HotspotListActivity.class);
+                navigation.putExtra("id", positionId);
+                navigation.putExtra("pName", pName);
+                navigation.putExtra("pLatitude", pLatitude);
+                navigation.putExtra("pLongitude", pLongitude);
                 startActivity(navigation);
             }
         });
@@ -68,6 +76,13 @@ public class NewHotspotActivity extends FragmentActivity implements OnMapReadyCa
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
+                new LatLng(
+                        Double.parseDouble(pLatitude),
+                        Double.parseDouble(pLongitude)
+                ),
+                12.0f
+        ));
         googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {

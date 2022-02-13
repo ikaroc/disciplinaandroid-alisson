@@ -20,16 +20,16 @@ public class HotspotEntity {
     public String longitude;
 
     @ColumnInfo(name = "weekend")
-    public String weekend;
+    public String weekday;
 
     @ColumnInfo(name = "position_id")
     public int positionId;
 
-    public HotspotEntity( String name, String latitude, String longitude, String weekend, int positionId) {
+    public HotspotEntity( String name, String latitude, String longitude, String weekday, int positionId) {
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
-        this.weekend = weekend;
+        this.weekday = weekday;
         this.positionId = positionId;
     }
 
@@ -41,7 +41,7 @@ public class HotspotEntity {
                 ", name='" + name + '\'' +
                 ", latitude='" + latitude + '\'' +
                 ", longitude='" + longitude + '\'' +
-                ", weekend='" + weekend + '\'' +
+                ", weekend='" + weekday + '\'' +
                 '}';
     }
 }

@@ -12,6 +12,7 @@ import com.example.guiadeviajem.R;
 import com.example.guiadeviajem.database.position.PositionDatabase;
 import com.example.guiadeviajem.database.position.PositionEntity;
 import com.example.guiadeviajem.databinding.ActivityNewLocationBinding;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -64,6 +65,7 @@ public class NewLocationActivity extends FragmentActivity implements OnMapReadyC
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        googleMap.moveCamera(CameraUpdateFactory.zoomTo(3.0f));
         googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {

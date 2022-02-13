@@ -47,11 +47,10 @@ public class LocationListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 PositionEntity position = responseData.get(i);
                 Intent navigation = new Intent(LocationListActivity.this, HotspotListActivity.class);
-                navigation.putExtra("name", position.name);
-                Log.v("name", position.name);
+                navigation.putExtra("pName", position.name);
                 navigation.putExtra("id", String.valueOf(position.id));
-                navigation.putExtra("latitude", position.latitude);
-                navigation.putExtra("longitude", position.longitude);
+                navigation.putExtra("pLatitude", position.latitude);
+                navigation.putExtra("pLongitude", position.longitude);
                 startActivity(navigation);
             }
         });
